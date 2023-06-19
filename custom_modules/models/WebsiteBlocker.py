@@ -28,7 +28,7 @@ class WebsiteBlocker:
     def search(self, website_in_question):
         # search if a website already exists
         for website in self.__website_list:
-            if website is website_in_question:
+            if website == website_in_question:
                 return True
         return False
 
