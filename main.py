@@ -9,6 +9,11 @@ def main():
     
     for website in websites:
         print(website)
+        
+    blocker.block_all(websites)
+    
+    for website in websites:
+        print(website)
     
     
 if __name__ == "__main__":
