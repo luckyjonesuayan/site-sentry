@@ -1,5 +1,5 @@
-# Cockblocker (WIP)
-Cockblock is a website blocking application that limits/restricts user access to certain websites. This may be used for productivity.
+# SiteSentry (WIP)
+SiteSentry is a website blocking application that limits/restricts user access to certain websites. This may be used for productivity.
 
 ## Requirements
 - Python 3.x
