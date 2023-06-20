@@ -1,0 +1,3 @@
+# WEBSITE LIST - Add the websites you want to be blocked below this line. Separate them by a line break:
+facebook.com
+twitter.com
