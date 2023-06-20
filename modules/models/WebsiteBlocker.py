@@ -1,9 +1,11 @@
 from datetime import datetime
 from modules.exceptions.exceptions import InvalidTimeDuration, ZeroTimeDuration
-from modules.enums.enums import Duration
-import os
 
 class WebsiteBlocker:
+    # final static variables
+    CONSTANT_NO_DURATION = 0
+    CONSTANT_INFINITE_DURATION = float("inf")
+    
     def __init__(self):
         self._website_list = []
         self._duration = 0
@@ -57,7 +59,7 @@ class WebsiteBlocker:
     
     def unblock(self, website):
         # unblocks a website
-        website.set_blocked_duration(Duration.NO_DURATION.value)
+        website.set_blocked_duration(self.CONSTANT_NO_DURATION)
         self._reset_website_variables(website)
         
 
@@ -93,7 +95,7 @@ class WebsiteBlocker:
         
     def set_duration(self, time_start = None, time_end = None):
         # sets the blocked duration of the website
-        duration = float("inf")
+        duration = self.CONSTANT_INFINITE_DURATION
         
         if time_start is not None and time_end is not None:
             duration = self._calculate_duration(time_start, time_end)

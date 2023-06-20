@@ -3,7 +3,7 @@ import tldextract
 from urllib.parse import urlparse
 from modules.models.Website import Website
 
-class FileReader:
+class FileProvider:
     def __init__(self):
         self._websites = []
         return

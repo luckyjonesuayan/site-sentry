@@ -1,5 +1,5 @@
 from modules.models.WebsiteBlocker import WebsiteBlocker
-from modules.models.FileReader import FileReader
+from modules.models.FileProvider import FileProvider
 
 def main():
     # todo: backup folder to contain list of websites that were blocked for contingency
@@ -8,7 +8,7 @@ def main():
     # todo: logcat for code tracing
     # make executable
     
-    file_reader = FileReader()
+    file_reader = FileProvider()
     blocker = WebsiteBlocker()
     websites = file_reader.get_website_list()
     
