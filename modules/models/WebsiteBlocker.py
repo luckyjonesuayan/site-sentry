@@ -1,6 +1,6 @@
 from datetime import datetime
-from custom_modules.exceptions.exceptions import InvalidTimeDuration, ZeroTimeDuration
-from custom_modules.enums.enums import Duration
+from modules.exceptions.exceptions import InvalidTimeDuration, ZeroTimeDuration
+from modules.enums.enums import Duration
 import os
 
 class WebsiteBlocker:

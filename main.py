@@ -1,6 +1,5 @@
-from custom_modules.models.Website import Website
-from custom_modules.models.WebsiteBlocker import WebsiteBlocker
-from custom_modules.models.FileReader import FileReader
+from modules.models.WebsiteBlocker import WebsiteBlocker
+from modules.models.FileReader import FileReader
 
 def main():
     # todo: backup folder to contain list of websites that were blocked for contingency

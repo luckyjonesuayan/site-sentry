@@ -1,7 +1,7 @@
 import textwrap
 import tldextract
 from urllib.parse import urlparse
-from custom_modules.models.Website import Website
+from modules.models.Website import Website
 
 class FileReader:
     def __init__(self):
