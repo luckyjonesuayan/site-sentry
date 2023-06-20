@@ -1,5 +1,5 @@
 # SiteSentry (WIP)
-SiteSentry is a website blocking application that limits/restricts user access to certain websites. This may be used for productivity.
+SiteSentry helps you to effortlessly track your website usage and effectively block it, enabling you to optimize your time usage.
 
 ## Requirements
 - Python 3.x
@@ -20,13 +20,14 @@ Each website should be separated by a new line.
 A website can be as simple as **facebook.com**, **instagram.com**, **twitter.com**, etc.
 It can also be a link, such as: https://github.com/luckyx314/website-blocker
 
+An included **sample_website_list.txt** file may serve as your reference for adding a website. This is not included in the program execution, just for reference.
 
 **IMPORTANT NOTE: If only a domain is provided, e.g., facebook.com, all associated subdomains and links will also be blocked. If a link is specified, however, only that link is blocked.**
 
 
-### Sample reference file
-An included **sample_website_list.txt** file may serve as your reference for adding a website. This is not included in the program execution, just for reference.
 
+### Tracking and monitoring
+The program can also track how much time you spend on a specific site on a given day. You can enable this configuration in the **config.ini** file.
 
 ### Blocking, Unblocking, and Blocked Period
 - **Terms:**
@@ -53,7 +54,7 @@ An included **sample_website_list.txt** file may serve as your reference for add
 
 ### Unblocking
 There are 2 main ways to unblock your added sites:
-1. Unblock
+1. Manual Unblock
    - Simply by removing the website from the list and rerunning the program will unblock the website. Consequently, removing everything will unblock all previously added sites.
 2. Duration-based unblocking
    - Websites are automatically unblocked when the `end_time` set equals the current time.
