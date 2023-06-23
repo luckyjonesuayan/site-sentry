@@ -46,22 +46,11 @@ class WebsiteBlocker:
         self.set_websites(websites)
         for website in websites:
             self.block(website, time_start, time_end)
-
-    def _set_website_variables(self, website, time_start = None, time_end = None, is_blocked_value = False):
-        # set appropriate website varibales if they are to be blocked
-        website.set_start_blocked_time(time_start)
-        website.set_end_blocked_time(time_end)
-        website.set_is_blocked(is_blocked_value)
-        
-    def _reset_website_variables(self, website):
-        # reset website variables to their original states
-        self._set_website_variables(website)
     
     def unblock(self, website):
         # unblocks a website
         website.set_blocked_duration(self.CONSTANT_NO_DURATION)
         self._reset_website_variables(website)
-        
 
     def unblock_all(self):
         # unblocks all websites in the list
@@ -106,6 +95,22 @@ class WebsiteBlocker:
             raise InvalidTimeDuration("End time should be later than the start time.")
             
         self._duration = duration
+        
+    def _set_website_variables(self, website, time_start = None, time_end = None, is_blocked_value = False):
+        # set appropriate website varibales if they are to be blocked
+        website.set_start_blocked_time(time_start)
+        website.set_end_blocked_time(time_end)
+        website.set_is_blocked(is_blocked_value)
+        
+    def _reset_website_variables(self, website):
+        # reset website variables to their original states
+        """
+            website variables refer to:
+            start_blocked_time,
+            end_blocked_time,
+            is_blocked
+        """
+        self._set_website_variables(website)
 
     # Getters
     def get_websites(self):

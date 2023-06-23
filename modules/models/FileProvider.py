@@ -1,4 +1,3 @@
-import textwrap
 import tldextract
 from urllib.parse import urlparse
 from modules.models.Website import Website
@@ -53,26 +52,9 @@ class FileProvider:
         
     # generators
     def _generate_initial_website_list(self):
-        # ensure that to remove the leading whitespace of the initial message
-        initial_message = textwrap.dedent("""
-                    /*
-                        TIME DURATION - Blocked period of the websites that you have specified. 
-                        TIME FORMAT: start_time, end_time. 
-                        EXAMPLE: 6:30 AM to 6:30 PM. This means that the website that coincides above will be blocked from 6:30 AM to 6:30 PM
-                        Check sample_website_list.txt for reference.
-
-                        Read more: https://github.com/luckyx314/website-blocker
-
-                        Input the time duration directly below the warning.
-                    */
-                    <--- WARNING: DO NOT MODIFY/DELETE THIS LINE --->
-                """
-        )
-        
         # generate the initial website list
         with open("website_list.txt", "w") as file:
             file.write("# WEBSITE LIST - List the websites you want to be blocked below this line:\n\n")
-            file.write(initial_message)
     
     def _generate_initial_config(self):
         return    

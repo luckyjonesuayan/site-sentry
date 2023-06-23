@@ -45,4 +45,4 @@ class Website:
         duration_txt = f"{self._blocked_duration} secs OR {self._blocked_duration/60} min/s\nSTART BLOCKED TIME: {self._start_blocked_time}\nEND BLOCKED TIME: {self._end_blocked_time}\n" if self._is_blocked else "0\n"
         if (math.isinf(self._blocked_duration)):
             duration_txt = "Infinite\n"
-        return f"Website URL: {self._url}\nBLOCKED: {self._is_blocked}\nBLOCKED DURATION: {duration_txt}" 
+        return f"Website URL: {self._url}\nBLOCKED: {self._is_blocked}\nBLOCKED DURATION: {duration_txt}"
